@@ -198,6 +198,15 @@ public class ControladadorFacebook {
         return file.getName();
 	}		
 
+	public static Facebook configFacebook(Properties props) {
+		Facebook fb = new FacebookFactory().getInstance();
+		fb.setOAuthAppId(props.getProperty("oauth.appId"), props.getProperty("oauth.appSecret"));
+		fb.setOAuthPermissions(props.getProperty("oauth.permissions"));
+		if(props.getProperty("oauth.accessToken") != null)
+			fb.setOAuthAccessToken(new AccessToken(props.getProperty("oauth.accessToken"), null));
+		return fb;
+	}	
+
 public static void printPost(Post p) {
 		if(p.getStory() != null)
 			System.out.println("Publicacion: " + p.getStory());

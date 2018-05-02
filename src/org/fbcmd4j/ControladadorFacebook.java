@@ -213,5 +213,15 @@ public static void printPost(Post p) {
 			logger.error(e);
 		}		
 	}
+
+	public static void postLink(String link, Facebook fb) {
+		try {
+			fb.postLink(new URL(link));
+		} catch (MalformedURLException e) {
+			logger.error(e);
+		} catch (FacebookException e) {
+			logger.error(e);
+		}
+	}
 	
 }	//	final	main

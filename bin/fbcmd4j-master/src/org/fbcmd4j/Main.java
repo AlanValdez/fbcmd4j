@@ -14,6 +14,7 @@ import facebook4j.Facebook;
 import facebook4j.FacebookException;
 import facebook4j.Post;
 import facebook4j.ResponseList;
+import facebook4j.auth.AccessToken;
 
 public class Main {
 	static final Logger logger = LogManager.getLogger(Main.class);
@@ -36,7 +37,7 @@ public class Main {
 			Scanner scan = new Scanner(System.in);
 			while(true) {
 				fb = ControladadorFacebook.configFacebook(props);
-				System.out.println("Cliente de Facebook en linea de comando \n\n"
+				System.out.println("Cliente de Facebook en línea de comando por David Servín \n\n"
 								+  "Opciones: \n"
 								+  "(0) --> Obtener Token \n"
 								+  "(1) --> Noticias \n"
@@ -87,13 +88,13 @@ public class Main {
 						break;
 					}
 				} catch (InputMismatchException ex) {
-					System.out.println("Ocurrio un error, revisar log.");
-					logger.error("Opcion invalida. %s. \n", ex.getClass());
+					System.out.println("Ocurrió un error, favor de revisar log.");
+					logger.error("Opción inválida. %s. \n", ex.getClass());
 				} catch (FacebookException ex) {
-					System.out.println("Ocurrio un error, revisar log.");
+					System.out.println("Ocurrió un error, favor de revisar log.");
 					logger.error(ex.getErrorMessage());
 				} catch (Exception ex) {
-					System.out.println("Ocurrio un error, revisar log.");
+					System.out.println("Ocurrió un error, favor de revisar log.");
 					logger.error(ex);
 				}
 				System.out.println();

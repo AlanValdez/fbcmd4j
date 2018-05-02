@@ -37,7 +37,7 @@ public class Main {
 			Scanner scan = new Scanner(System.in);
 			while(true) {
 				fb = ControladadorFacebook.configFacebook(props);
-				System.out.println("Cliente de Facebook en lÃ­nea de comando por David ServÃ­n \n\n"
+				System.out.println("Cliente de Facebook en linea de comando \n\n"
 								+  "Opciones: \n"
 								+  "(0) --> Obtener Token \n"
 								+  "(1) --> Noticias \n"

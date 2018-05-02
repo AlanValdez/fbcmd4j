@@ -198,5 +198,12 @@ public class ControladadorFacebook {
         return file.getName();
 	}		
 
+public static void printPost(Post p) {
+		if(p.getStory() != null)
+			System.out.println("Publicacion: " + p.getStory());
+		if(p.getMessage() != null)
+			System.out.println("Mensaje: " + p.getMessage());
+		System.out.println("--------------------------------");
+	}
 	
 }	//	final	main

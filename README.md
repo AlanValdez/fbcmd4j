@@ -3,7 +3,7 @@
 ## Acerca de
 Cliente de Facebook en línea de comando para ver o publicar en tu cuenta de facebook.
 
-## Instalación
+## Guia de uso
 **Clonar el repositorio**  
 
 git clone https://github.com/AlanValdez/fbcmd4j.git

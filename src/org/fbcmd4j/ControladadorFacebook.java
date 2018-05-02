@@ -44,7 +44,7 @@ public class ControladadorFacebook {
 		Path configFolder = Paths.get(folderName);
 		Path configFile = Paths.get(folderName, fileName);
 		if (!Files.exists(configFile)) {
-			logger.info("Creando nuevo archivo de configuración.");
+			logger.info("Creando nuevo archivo de configuraciÃ³n.");
 			
 			if (!Files.exists(configFolder))
 				Files.createDirectory(configFolder);
@@ -55,7 +55,7 @@ public class ControladadorFacebook {
 		propiedades.load(Files.newInputStream(configFile));
 		BiConsumer<Object, Object> emptyProperty = (p, e) -> {
 			if(((String)e).isEmpty())
-				logger.info("La propiedad '" + p + "' está vacía");
+				logger.info("La propiedad '" + p + "' estÃ¡ vacÃ­a");
 		};
 		propiedades.forEach(emptyProperty);
 		return propiedades;
@@ -98,7 +98,7 @@ public class ControladadorFacebook {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			System.out.println("Ingresa el siguiente código en tu navegador: " + userCode);
+			System.out.println("Ingresa el siguiente cÃ³digo en tu navegador: " + userCode);
 
 			String accessToken = "";
 			while(accessToken.isEmpty()) {
@@ -132,8 +132,8 @@ public class ControladadorFacebook {
 	        properties.setProperty("oauth.accessToken", accessToken);
 	        
 			guardaPropiedades(folderName, fileName, properties);
-			System.out.println("Configuración guardada exitosamente.");
-			logger.info("Configuración guardada exitosamente.");
+			System.out.println("ConfiguraciÃ³n guardada exitosamente.");
+			logger.info("ConfiguraciÃ³n guardada exitosamente.");
 		} catch(Exception e) {
 			logger.error(e);
 		}
@@ -156,23 +156,6 @@ public class ControladadorFacebook {
 		return postData;
 	}
 	
-	public static Facebook configFacebook(Properties props) {
-		Facebook fb = new FacebookFactory().getInstance();
-		fb.setOAuthAppId(props.getProperty("oauth.appId"), props.getProperty("oauth.appSecret"));
-		fb.setOAuthPermissions(props.getProperty("oauth.permissions"));
-		if(props.getProperty("oauth.accessToken") != null)
-			fb.setOAuthAccessToken(new AccessToken(props.getProperty("oauth.accessToken"), null));
-		return fb;
-	}
-	
-	public static void printPost(Post p) {
-		if(p.getStory() != null)
-			System.out.println("Publicacion: " + p.getStory());
-		if(p.getMessage() != null)
-			System.out.println("Mensaje: " + p.getMessage());
-		System.out.println("--------------------------------");
-	}
-	
 	public static HttpURLConnection metodoPostJson (byte[] postDataBytes, URL url) throws IOException {
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("POST");
@@ -184,25 +167,6 @@ public class ControladadorFacebook {
         return conn;
 	}
 	
-	public static void postEstado(String msg, Facebook fb) {
-		try {
-			fb.postStatusMessage(msg);
-		} catch (FacebookException e) {
-			logger.error(e);
-		}		
-	}
-	
-	public static void postLink(String link, Facebook fb) {
-		try {
-			fb.postLink(new URL(link));
-		} catch (MalformedURLException e) {
-			logger.error(e);
-		} catch (FacebookException e) {
-			logger.error(e);
-		}
-	}
-	
-	//metodo que guarda las publicaciones
 	public static String guardarPublicacionArchivo(String fileName, List<Post> posts) {
 		File file = new File(fileName + ".txt");
 
@@ -229,6 +193,6 @@ public class ControladadorFacebook {
 		}
         
         return file.getName();
-	}	
+	}		
 	
 }	//	final	main

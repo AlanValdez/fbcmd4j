@@ -141,7 +141,7 @@ public class ControladadorFacebook {
 			logger.error(e);
 		}
 	}
-
+	// guarda las el token generado a el archivo properties en la carpeta config
 	public static void guardaPropiedades(String folderName, String fileName, Properties props) throws IOException {
 		Path configFile = Paths.get(folderName, fileName);
 		props.store(Files.newOutputStream(configFile), "Token generado:");

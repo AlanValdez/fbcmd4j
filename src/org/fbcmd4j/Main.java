@@ -104,6 +104,7 @@ public class Main {
 		}
 	}	//	fin	main
 	
+	// metodo que imoreme la cantidad de publicaciones deseadas
 	public static void cantDePost(String fileName, ResponseList<Post> posts, Scanner scan) {
 		System.out.println("Guardar resultados en un archivo de texto? Si/No");
 		String option = scan.nextLine();

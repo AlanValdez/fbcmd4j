@@ -1,5 +1,4 @@
-# fbcmd4j
-+# Entrega final Computación en Java
+# Entrega final Computación en Java
 +
 ## Acerca de
 Cliente de Facebook en línea de comando para ver o publicar en tu cuenta de facebook.

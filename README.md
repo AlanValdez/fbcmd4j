@@ -57,7 +57,7 @@ Contiene los metodos:
 ## Créditos
 Desarrollado por:
 - 2711306 Alan Bledimir Valdez Chavez
-- Jose Manuel por 
+- Jose Manuel 
 
 ## Licencia 
 GNU GENERAL PUBLIC LICENSE

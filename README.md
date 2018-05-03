@@ -35,13 +35,11 @@ Desarrollado por:
 - 2711306 Alan Bledimir Valdez Chavez
 
 ## Licencia 
-Copyright (c)  Alan Valdez
-All rights reserved.
+GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
 
-Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below) provided that the following conditions are met:
-
-        * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-        * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-        * Neither the name of Alan Valdez nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
 
 
